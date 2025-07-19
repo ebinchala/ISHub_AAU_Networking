@@ -1,0 +1,179 @@
+Assignment 002 – Communication  
+Channels, Communication Models & OSI Model  
+Section 1: Communication Channels (Cables, Connectors, and Crimping)  
+Name: EBENEZER CHALA  
+
+1. List and explain the main differences between STP and UTP cables  
+STP (Shielded Twisted Pair):  
+- Has a metallic shield to reduce electromagnetic interference (EMI)  
+- More expensive due to shielding materials  
+- More difficult to install and less flexible  
+- Performs better in high-interference environments  
+
+UTP (Unshielded Twisted Pair):  
+- Does not have shielding; more prone to EMI  
+- Less expensive and widely used  
+- Easier to install and more flexible  
+- May suffer signal degradation in noisy environments  
+
+2. What are advantages and disadvantages of STP cables?  
+Advantages:  
+- Excellent resistance to electromagnetic and radio frequency interference.  
+- Better data integrity over longer distances in noisy environments.  
+
+Disadvantages:  
+- More expensive than UTP.  
+- Thicker and less flexible, making installation harder.  
+- Requires proper grounding; otherwise, shielding can become ineffective.  
+
+3. Define Coaxial cable and mention two main uses in networking.  
+Definition:  
+A coaxial cable is a type of electrical cable with a central conductor, an insulating layer, a metallic shield, and an outer insulating layer. It is designed to carry high-frequency signals with minimal interference.  
+
+Uses in Networking:  
+- Cable Internet connections – Commonly used by ISPs to deliver broadband internet.  
+- CCTV systems – Frequently used in analog security camera installations.  
+
+4. What is the function of a BNC connector, and where is it typically used?  
+A BNC (Bayonet Neill–Concelman) connector is used to connect coaxial cables securely using a twist-lock mechanism. It is commonly used in CCTV systems, analog video signals, and older Ethernet networks like 10BASE2.  
+
+5. Differentiate between RJ45 and RJ11 connectors in terms of number of pins and use.  
+RJ45 connectors have 8 pins and are mainly used in networking, especially for Ethernet cables.  
+RJ11 connectors have 4 or 6 pins and are used for telephone connections.  
+
+6. What is the maximum data transmission capacity and range of UTP Category 5e and 6 cables?  
+Category 5e cables can transmit data up to 1 Gbps over a distance of 100 meters.  
+Category 6 cables can support speeds up to 10 Gbps, but only over a shorter range (up to 55 meters); beyond that, the speed drops to 1 Gbps for up to 100 meters.  
+
+7. Name and describe the two main types of Fiber Optic cables.  
+The two main types are:  
+- Single-mode fiber: Has a small core and transmits data using a single light path. It's used for long-distance communication.  
+- Multi-mode fiber: Has a larger core and allows multiple light paths. It's used for shorter distances, like within buildings.  
+
+8. What is the difference between Single-mode and Multi-mode fiber?  
+Single-mode fiber uses a single light beam and is suitable for long-distance and high-speed data transmission.  
+Multi-mode fiber uses multiple light beams and is ideal for shorter distances due to modal dispersion.  
+
+9. Give two advantages of using fiber optic cables over copper cables.  
+- Higher speed and bandwidth: Fiber optics can carry much more data than copper.  
+- Immune to electromagnetic interference: Unlike copper, fiber doesn't suffer from EMI, making it more reliable in noisy environments.  
+
+10. Draw and label the color coding for T568A and T568B standards used in Ethernet cable crimping.  
+T568A Color Order (Left to Right, Pin 1 to Pin 8):  
+White/Green, Green, White/Orange, Blue, White/Blue, Orange, White/Brown, Brown  
+
+T568B Color Order (Left to Right, Pin 1 to Pin 8):  
+White/Orange, Orange, White/Green, Blue, White/Blue, Green, White/Brown, Brown  
+
+11. What is a Straight-through cable used for? List at least two examples.  
+A straight-through cable connects different types of devices, such as:  
+- Computer to switch  
+- Router to switch  
+
+12. What is a Crossover cable used for? Give at least one real-world use case.  
+A crossover cable connects similar devices, like:  
+- Computer to computer  
+
+13. Identify at least two tools used for creating or testing Ethernet cables.  
+- Crimping tool – Used to attach RJ45 connectors to Ethernet cables.  
+- Cable tester – Used to check if the cable is wired correctly and functioning.  
+
+14. Fill in the blanks:  
+A straight-through cable connects computer to switch.  
+A crossover cable connects computer to computer.  
+
+15. Compare coaxial, twisted pair, and fiber optic cables in terms of cost, speed, and susceptibility to interference.  
+- Coaxial: Medium cost, medium speed, and moderate resistance to interference.  
+- Twisted pair (e.g., UTP): Low cost, good speed for LAN, but more prone to interference.  
+- Fiber optic: High cost, very high speed, and excellent resistance to interference.  
+
+16. Define a communication model in computer networks.  
+A communication model in computer networks is a framework that describes how data is transmitted between devices. It outlines the process, roles, and steps involved in sending and receiving information across a network.  
+
+17. What are the three basic types of data flow in communication? Give examples.  
+- Simplex – Data flows in only one direction. Example: TV broadcast.  
+- Half-Duplex – Data flows in both directions, but one at a time. Example: Walkie-talkies.  
+- Full-Duplex – Data flows in both directions at the same time. Example: Phone call.  
+
+18. Explain the difference between Simplex, Half-Duplex, and Full-Duplex communication with examples.  
+- Simplex: One-way communication only. Example: A keyboard sending input to a computer.  
+- Half-Duplex: Two-way communication, but only one device can send at a time. Example: A push-to-talk radio.  
+- Full-Duplex: Both devices can send and receive data simultaneously. Example: A video call or telephone conversation.  
+
+19. What is the importance of a protocol in a communication model?  
+A protocol is essential because it defines the rules and standards for communication between devices. It ensures that data is sent, received, and understood correctly, regardless of the hardware or software differences between devices.  
+
+20. Briefly describe the basic elements of a communication system.  
+- Sender – The device that creates and sends the message.  
+- Receiver – The device that receives and interprets the message.  
+- Medium – The channel (like cables or wireless signals) through which data travels.  
+- Message – The actual data or information being communicated.  
+- Protocol – The rules that guide the communication process.  
+
+21. Write down the seven layers of the OSI model in correct order (Top → Bottom).  
+Application  
+Presentation  
+Session  
+Transport  
+Network  
+Data Link  
+Physical  
+
+22. Match the following OSI layers with their correct protocols:  
+- Application – HTTP  
+- Transport – TCP  
+- Network – IP  
+- Data Link – Ethernet  
+- Physical – Fiber Optic Cable  
+
+23. What is the main function of the Transport Layer (Layer 4)? Include two protocols used in this layer.  
+The Transport Layer ensures reliable data transfer between devices, handling error checking and flow control. It also breaks data into segments and reassembles them.  
+Protocols:  
+- TCP (Transmission Control Protocol)  
+- UDP (User Datagram Protocol)  
+
+24. At which layer does IP addressing occur? Explain its role.  
+IP addressing occurs at the Network Layer (Layer 3). Its role is to identify devices across different networks and ensure that data packets are routed to the correct destination using IP addresses.  
+
+25. What is the Data Unit Name used at the following layers:  
+- Layer 4 (Transport): Segment  
+- Layer 3 (Network): Packet  
+- Layer 2 (Data Link): Frame  
+- Layer 1 (Physical): Bits  
+
+26. Describe the difference between a router, a switch, and a hub, and match each to its corresponding OSI layer.  
+- Router: Operates at the Network Layer (Layer 3). It routes data between different networks using IP addresses.  
+- Switch: Operates at the Data Link Layer (Layer 2). It connects devices within the same network and uses MAC addresses to forward data.  
+- Hub: Operates at the Physical Layer (Layer 1). It simply broadcasts data to all connected devices without filtering.  
+
+27. What happens at each layer of the OSI model when sending a file?  
+1. Application Layer (7) – The user initiates the file transfer (e.g., via email or FTP). The application prepares the data for transmission.  
+2. Presentation Layer (6) – The file is formatted (e.g., encrypted or compressed) for proper interpretation by the receiving system.  
+3. Session Layer (5) – Establishes, manages, and terminates the connection between the two computers.  
+4. Transport Layer (4) – Breaks the file into smaller segments (TCP) or datagrams (UDP), adds port numbers, and ensures reliable delivery.  
+5. Network Layer (3) – Adds source and destination IP addresses, routing the data across networks.  
+6. Data Link Layer (2) – Encapsulates data into frames, adds MAC addresses, and ensures error-free transmission over the local network.  
+7. Physical Layer (1) – Converts the data into bits (electrical, optical, or radio signals) and transmits them over the medium (cable, Wi-Fi, etc.).  
+
+28. Why is the OSI model important in understanding networks?  
+- Standardization: Provides a universal framework for designing and troubleshooting networks.  
+- Modularity: Each layer has a specific function, making it easier to develop and update protocols.  
+- Troubleshooting: Helps isolate issues (e.g., determining if a problem is at the Network or Data Link layer).  
+- Interoperability: Ensures different vendors' devices can communicate effectively.  
+
+29. Real-life analogy: Postal Service (Sending a Letter)  
+1. Application Layer – You write a letter (the data/file).  
+2. Presentation Layer – You translate it into another language if needed (encryption/compression).  
+3. Session Layer – You establish contact with the recipient (like calling to confirm they can receive mail).  
+4. Transport Layer – You put the letter in an envelope with a return address (like TCP adding port numbers).  
+5. Network Layer – The postal service reads the destination address and decides the best route (like IP routing).  
+6. Data Link Layer – The mail truck transports the letter between post offices (like switches using MAC addresses).  
+7. Physical Layer – The letter is physically carried via trucks, planes, etc. (like cables or Wi-Fi signals).  
+
+30. OSI vs. TCP/IP Model Comparison  
+Similarity:  
+- Both use layered architectures to standardize communication.  
+
+Difference:  
+- OSI has 7 layers, while TCP/IP has 4 (combines OSI’s Application, Presentation, and Session into one "Application" layer).  
+- TCP/IP is practical (used in the real world, e.g., the Internet), while OSI is theoretical (used for learning and design).  
