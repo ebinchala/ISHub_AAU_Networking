@@ -1,0 +1,148 @@
+IS HUB Summer Bootcamp Networking Track 
+Assignment 003 – IP Addressing & Sub-netting Concepts 
+Covers: IP Addressing Basics and Sub-netting Calculations
+
+
+Name Ebenezer Chala 
+
+Part A – IP Addressing Basics
+1. What is an IP address and why is it important in a network?
+An IP address (Internet Protocol address) is a unique identifier assigned to each device connected to a network. It allows devices to locate and communicate with each other across a network, including the internet.
+Importance:
+# It identifies devices on a network uniquely.
+# Enables routing of data from source to destination.
+# Helps in network management and control.
+# Essential for troubleshooting connectivity issues.
+
+2.Differentiate between IPv4 and IPv6 in terms of: 
+ # IPv4: 
+    Address length ==== 32Bits 
+    Notation format ==== Dotted decimal (e.g., 192.168.1.1)
+    Number of addresses ==== 4.3 billion (2³²)
+# IPv6: 
+    Address length ==== 128 Bits
+    Notation format === Hexadecimal, colon-separated (e.g., 2001:db8::1)
+    Number of addresses ==== 340 undecillion (2¹²8)
+    
+3. Write the binary equivalent of the IPv4 address 192.168.10.1.
+We convert each octet to binary:
+
+    192 --- 11000000
+    
+    168 --- 10101000
+    
+    10 --- 00001010
+    
+    1 --- 00000001
+    Binary equivalent:
+    11000000.10101000.00001010.00000001
+
+4. Convert the following binary IP address to decimal:
+11000000.10101000.00000001.00000010
+Break each octet into decimal:
+
+    11000000 --- 192
+    
+    10101000 ---168
+    
+    00000001 ---1
+    
+    00000010 ---2
+
+Decimal IP address: 192.168.1.2
+
+5. What are the ranges of Class A, B, and C IPv4 addresses?
+
+    Class A: 1.0.0.0 to 126.255.255.255
+    Class B: 128.0.0.0 to 191.255.255.255
+    Class C: 192.0.0.0 to 223.255.255.255
+
+6. Which IP class does the address 172.16.5.4 belong to?
+The IP address 172.16.5.4 falls within the range of Class B (128.0.0.0 to 191.255.255.255), so it belongs to Class B.
+
+7. What is the difference between public IP and private IP? List private IP ranges.
+Public IP: Assigned by ISPs and used to communicate over the internet. They are globally unique.
+Private IP: Used within local networks and are not routable on the internet. They help conserve public IPs.
+    
+    Private IP ranges:
+    Class A: 10.0.0.0 to 10.255.255.255
+    Class B: 172.16.0.0 to 172.31.255.255
+    Class C: 192.168.0.0 to 192.168.255.255
+
+
+8. What is the role of loop back address in IP networking?
+The loop-back address, usually 127.0.0.1, is used to test network software on the local machine. It allows a system to send and receive data to itself without involving the network interface. It helps in testing TCP/IP stack functionality without actual network hardware.
+
+9. Explain the use of static IP vs dynamic IP with examples.
+    Static IP: A fixed IP address manually assigned to a device. It does not change.
+Example: A server with static IP 192.168.1.10 so that clients can always reach it.
+    
+    Dynamic IP: Automatically assigned by a DHCP server and may change over time.
+Example: A home computer receiving IP 192.168.1.25 from the router temporarily.
+    
+
+10. What is the default subnet mask for:
+
+    Class A ---255.0.0.0
+    Class B ---255.255.0.0
+    Class C ---255.255.255.0
+
+
+11. What is sub-netting and why is it used?
+    Sub-netting is the process of dividing a large IP network into smaller, more manageable sub-networks (subnets). It is used to improve network performance, enhance security, and efficiently utilize IP addresses.
+    Why it's used:
+    Reduces network congestion
+    Improves security and isolation
+    Optimizes IP address usage
+    Simplifies network management
+
+12. Given the IP address 192.168.1.0/24, how many total IP addresses are available?
+    A /24 means 32 – 24 = 8 bits are available for hosts.
+Total IPs = 28 = 256 IP addresses
+
+
+13. From question 12, how many usable host IPs are there?
+Out of the 256 total IPs, 2 are reserved (network and broadcast addresses).
+Usable host IPs = 256 – 2 = 254
+
+14. How many subnets can be created from a /24 network if you borrow 2 bits?
+If you borrow 2 bits from the host portion:
+- Number of subnets = 2^2 = 4.
+
+15. What will be the new subnet mask if you borrow 3 bits from a /24 network?
+Original subnet mask: /24 (255.255.255.0)
+Borrow 3 bits: New subnet mask = /24 + 3 = /27 (255.255.255.224).
+
+16. Given IP: 192.168.10.0/26
+    - How many hosts per subnet?
+      Host bits = 32 - 26 = 6
+      Hosts per subnet = 2^6 - 2 = 64 - 2 = 62.
+    
+    - How many subnets can be created?
+      Default network is /24, borrowed bits = 26 - 24 = 2
+      Number of subnets = 2^2 = 4.
+    
+7. Calculate the first and last usable IP address in the subnet 192.168.10.64/26.
+    - Network Address: 192.168.10.64
+    - Broadcast Address: 192.168.10.127
+    - First Usable IP: 192.168.10.65
+    - Last Usable IP: 192.168.10.126
+
+18. Identify the network address and broadcast address of 10.0.0.0/22.
+    - Network Address: 10.0.0.0
+    - Broadcast Address: 10.0.3.255
+
+19. Fill in the blanks:
+    - CIDR /30 gives 2 usable IP addresses.
+    - CIDR /28 supports 14 hosts per subnet.
+
+20. You are given the address block 172.16.0.0/20.
+    - How many subnets can be created if you want each subnet to support at most 510 hosts?
+      - Required host bits: log2(510 + 2) = 9 ? /23 subnet mask (32 - 9 = 23)
+      - Original /20 network has 12 host bits (32 - 20 = 12)
+      - Borrowed bits for subnetting: 23 - 20 = 3
+      - Number of subnets: 2³ = 8
+    
+    - What will be the subnet mask?
+      - Subnet mask: 255.255.254.0 (or /23)
+
